@@ -1,0 +1,613 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: #fdf6f6;
+  color: #2d2d2d;
+  min-height: 100vh;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 8rem;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  letter-spacing: -0.5px;
+}
+
+/* Navigation styles */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2d2d2d;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+nav a:hover {
+  color: #666;
+}
+
+/* Add underline effect for navigation items */
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #2d2d2d;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Main content styles */
+main {
+  padding-top: 80px;
+  width: 100%;
+}
+
+/* Home section styles */
+#home {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20vh;
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  width: 100%;
+  margin-top: -80px;
+}
+
+.home-content {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  max-width: 600px;
+}
+
+.description {
+  font-size: 1.25rem;
+  color: #666;
+  line-height: 1.6;
+  text-align: center;
+  font-weight: 400;
+  margin-top: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Title wrapper for positioning */
+.title-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(-100vh);
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.title-wrapper.show {
+  opacity: 1;
+  transform: translateY(120px);
+}
+
+.title-wrapper.show.landed {
+  transform: translateY(2rem);
+}
+
+.animated-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #2d2d2d;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.animated-title .word {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.animated-title .word.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Update profile image styles */
+.profile-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.profile-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+
+.profile-image img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+/* Other sections */
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #2d2d2d;
+}
+
+/* Update responsive styles */
+@media (max-width: 1024px) {
+  header {
+    padding: 1rem 4rem;
+  }
+
+  .home-container {
+    gap: 2rem;
+  }
+
+  .profile-image img {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 1rem 2rem;
+  }
+
+  nav ul {
+    gap: 1.5rem;
+  }
+
+  #home {
+    padding-top: 15vh;
+  }
+
+  .home-container {
+    flex-direction: column-reverse;
+    margin-top: 0;
+  }
+
+  .home-content {
+    width: 100%;
+  }
+
+  .description {
+    margin: 8rem auto 0;
+  }
+
+  .animated-title {
+    font-size: 2.5rem;
+  }
+
+  .profile-image img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .logo-container {
+    width: 35px;
+    height: 35px;
+  }
+
+  .logo-text {
+    font-size: 0.9rem;
+  }
+
+  .key-button {
+    width: 20px;
+    height: 20px;
+    font-size: 0.8rem;
+  }
+
+  .title-wrapper.show {
+    transform: translateY(100px);
+  }
+
+  .title-wrapper.show.landed {
+    transform: translateY(2rem);
+  }
+
+  .connect-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Remove all the old boilerplate styles */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Logo styles */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-container {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.key-button {
+  background: #2d2d2d;
+  border: 1px solid #1a1a1a;
+  border-radius: 4px;
+  box-shadow: 0 3px 0 #1a1a1a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  width: 28px;
+  height: 28px;
+  padding: 4px;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  top: 0;
+}
+
+.key-button:hover {
+  background: #3d3d3d;
+}
+
+.key-button:active {
+  top: 3px;
+  box-shadow: 0 0 0 #1a1a1a;
+  background: #1a1a1a;
+}
+
+/* Add animation for the click effect */
+@keyframes keyPress {
+  0% {
+    top: 0;
+    box-shadow: 0 3px 0 #1a1a1a;
+  }
+  50% {
+    top: 3px;
+    box-shadow: 0 0 0 #1a1a1a;
+    background: #1a1a1a;
+  }
+  100% {
+    top: 0;
+    box-shadow: 0 3px 0 #1a1a1a;
+  }
+}
+
+.key-button.pressed {
+  animation: keyPress 0.15s ease;
+}
+
+/* Animation styles for the title */
+.animated-title .word {
+  opacity: 0;
+  display: inline-block;
+  transform: translateY(-100vh);
+  transition: all 1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  position: relative;
+}
+
+.animated-title .word.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: bounceIn 0.6s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: translateY(-100vh);
+  }
+  60% {
+    transform: translateY(20px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Timeline styles */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;  /* Reduced padding since we now have a title */
+  min-height: calc(100vh - 200px);  /* Adjusted for title space */
+}
+
+/* Road path styles */
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  background-color: #2d2d2d;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+  top: 0;
+}
+
+/* Road stripes */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    #ffffff 0,
+    #ffffff 20px,
+    transparent 20px,
+    transparent 40px
+  );
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  top: 0;
+}
+
+/* Timeline items */
+.timeline-item {
+  position: relative;
+  width: 42%;
+  margin: 60px 0;
+  z-index: 2;
+}
+
+.timeline-item.left {
+  margin-right: 58%;
+}
+
+.timeline-item.right {
+  margin-left: 58%;
+}
+
+/* Connector lines - updated to connect with main road */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 60px;  /* Increased width to ensure connection */
+  height: 15px;
+  background-color: #2d2d2d;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.timeline-item.left::before {
+  right: -60px;  /* Adjusted to match new width */
+}
+
+.timeline-item.right::before {
+  left: -60px;  /* Adjusted to match new width */
+}
+
+/* Timeline content header styles */
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.timeline-header h3 {
+  margin: 0;
+}
+
+.year {
+  background: #2d2d2d;
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Update existing timeline-content styles */
+.timeline-content {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eaeaea;
+}
+
+.timeline-content h4 {
+  margin-top: 5px;
+}
+
+.timeline-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #2d2d2d;
+}
+
+.timeline-content h4 {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.timeline-content ul {
+  list-style-type: disc;
+  margin: 10px 0;
+  color: #666;
+}
+
+.timeline-content li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+/* Removed .timeline-content .date styles since we're removing the year display */
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .timeline::before {
+    left: 30px;
+    width: 30px;
+  }
+
+  .timeline::after {
+    left: 30px;
+  }
+
+  .timeline-item {
+    width: calc(100% - 80px);
+    margin: 40px 0 40px 80px !important;
+  }
+
+  .timeline-item::before {
+    width: 45px;  /* Increased to ensure connection on mobile */
+    left: -45px;
+  }
+}
+
+/* Connect button styles */
+.connect-button {
+  display: inline-block;
+  background: #2d2d2d;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+  border: 2px solid #2d2d2d;
+}
+
+.connect-button:hover {
+  background: #ffffff;
+  color: #2d2d2d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.connect-button:active {
+  transform: translateY(0);
+}
+
+/* Journey section styles */
+#journey {
+  padding-top: 4rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2d2d2d;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
