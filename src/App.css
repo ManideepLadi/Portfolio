@@ -173,6 +173,10 @@ main {
   justify-content: center;
   align-items: center;
   line-height: 0;
+  padding: 12px;
+  background: #ffffff;  /* Changed back to white */
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  /* Lighter shadow */
 }
 
 .profile-image img {
@@ -181,6 +185,7 @@ main {
   object-fit: cover;
   border-radius: 4px;
   display: block;
+  border: 2px solid #2d2d2d;  /* Changed to dark border */
 }
 
 /* Other sections */
@@ -242,6 +247,10 @@ section h2 {
     font-size: 2.5rem;
   }
 
+  .profile-image {
+    padding: 10px;
+  }
+
   .profile-image img {
     width: 300px;
     height: 300px;
@@ -271,8 +280,20 @@ section h2 {
   }
 
   .connect-button {
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    min-width: 160px;
+  }
+
+  .social-links {
+    gap: 1rem;
+  }
+
+  .social-link {
+    font-size: 1.5rem;
+    width: 45px;
+    height: 45px;
+    padding: 10px;
   }
 }
 
@@ -576,38 +597,131 @@ section h2 {
 /* Connect button styles */
 .connect-button {
   display: inline-block;
+  padding: 16px 36px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 2rem;
   background: #2d2d2d;
   color: #ffffff;
-  padding: 12px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1.1rem;
-  margin-top: 2rem;
-  transition: all 0.3s ease;
   border: 2px solid #2d2d2d;
+  transition: all 0.3s ease;
+  min-width: 180px;
 }
 
 .connect-button:hover {
   background: #ffffff;
   color: #2d2d2d;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(45, 45, 45, 0.2);
 }
 
-.connect-button:active {
+/* Social links styles */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;  /* Increased from 1.5rem */
+  margin-top: 2rem;
+}
+
+/* LinkedIn styles */
+.social-link.linkedin {
+  color: #0077b5;
+}
+
+.social-link.linkedin:hover {
+  background: #0077b5;
+  color: #ffffff;
+  border-color: #0077b5;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 119, 181, 0.2);
+}
+
+/* YouTube styles */
+.social-link.youtube {
+  color: #ff0000;
+}
+
+.social-link.youtube:hover {
+  background: #ff0000;
+  color: #ffffff;
+  border-color: #ff0000;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
+}
+
+/* Instagram styles */
+.social-link.instagram {
+  color: #e4405f;
+}
+
+.social-link.instagram:hover {
+  background: #e4405f;
+  color: #ffffff;
+  border-color: #e4405f;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(228, 64, 95, 0.2);
+}
+
+.social-link:active {
   transform: translateY(0);
 }
 
-/* Journey section styles */
-#journey {
-  padding-top: 4rem;
+.cta-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #2d2d2d;
-  margin-bottom: 3rem;
-  font-weight: 700;
+/* Update responsive styles */
+@media (max-width: 768px) {
+  .cta-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .social-links {
+    margin-top: 0;
+  }
+}
+
+/* Social links base styles */
+.social-link {
+  font-size: 1.8rem;  /* Increased from 1.5rem */
+  transition: all 0.3s ease;
+  padding: 12px;  /* Increased from 8px */
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;  /* Increased from 45px */
+  height: 55px;  /* Increased from 45px */
+  border: 2px solid transparent;
+}
+
+/* Social links container */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;  /* Increased from 1.5rem */
+  margin-top: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .social-link {
+    font-size: 1.5rem;
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+  }
+  
+  .social-links {
+    gap: 1.5rem;
+  }
 }

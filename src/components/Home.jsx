@@ -50,8 +50,19 @@ function Home() {
             rel="noopener noreferrer" 
             className="connect-button"
           >
-            Connect with Me
+            Connect 1:1
           </a>
+          <div className="social-links">
+            <a href="https://www.youtube.com/@srinidhichintala" className="social-link youtube">
+              <i className="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/srinidhi-chintala" className="social-link linkedin">
+              <i className="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/srinidhichintala" className="social-link instagram">
+              <i className="fab fa-instagram"></i>
+            </a>
+          </div>
         </div>
         <div className="profile-image-container">
           <div className="profile-image">
