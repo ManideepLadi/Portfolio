@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import srinidhiImage from '../assets/Srinidhi.png';
+import '../styles/Home.css';
 
 function Home() {
   const [words, setWords] = useState(['Hi,', "I'm", 'Srinidhi']);
@@ -24,6 +25,13 @@ function Home() {
       }, 400); // Reduced from 600 to 400
     }, 100); // Reduced from 200 to 100
   }, []);
+
+  const scrollToResume = () => {
+    const resumeSection = document.getElementById('resume');
+    if (resumeSection) {
+      resumeSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section id="home">
@@ -69,6 +77,10 @@ function Home() {
             <img src={srinidhiImage} alt="Srinidhi" />
           </div>
         </div>
+      </div>
+      <div className="scroll-down" onClick={scrollToResume}>
+        <div className="arrow"></div>
+        <div className="arrow"></div>
       </div>
     </section>
   );

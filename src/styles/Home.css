@@ -1,0 +1,58 @@
+.scroll-down {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
+  height: 60px; /* Increased container height to accommodate larger arrows */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 8px; /* Space between the stacked arrows */
+  align-items: center;
+}
+
+.arrow {
+  position: relative;
+  width: 35px; /* Increased from 25px */
+  height: 6px; /* Increased from 4px */
+  background-color: #333;
+  transform: rotate(135deg);
+  transition: background-color 0.3s ease;
+}
+
+.arrow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -3px; /* Adjusted from -2px to account for thicker arrows */
+  width: 35px; /* Increased from 25px */
+  height: 6px; /* Increased from 4px */
+  background-color: #333;
+  transform: rotate(-90deg);
+  transform-origin: right center;
+  transition: background-color 0.3s ease;
+}
+
+/* Second arrow */
+.arrow + .arrow {
+  opacity: 0.5;
+  margin-top: 6px; /* Increased from 4px to maintain proportion */
+}
+
+.scroll-down:hover .arrow,
+.scroll-down:hover .arrow::after {
+  background-color: #666;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  40% {
+    transform: translateY(-8px) translateX(-50%);
+  }
+  60% {
+    transform: translateY(-4px) translateX(-50%);
+  }
+} 

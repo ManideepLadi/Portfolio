@@ -1,0 +1,33 @@
+/* Empty or remove the file if it was empty before */ 
+
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.resume-header h2 {
+  margin: 0;
+}
+
+.download-button {
+  background-color: #2D2D2D;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.download-button:hover {
+  background-color: #404040;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+} 

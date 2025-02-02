@@ -1,0 +1,5 @@
+.timeline {
+  position: relative;
+  margin-top: 2rem; /* Reduced from whatever it was before */
+  /* Rest of the timeline styles remain the same */
+} 
