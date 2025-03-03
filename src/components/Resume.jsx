@@ -1,6 +1,6 @@
 import '../styles/Resume.css';
 import Timeline from './Timeline';
-import resumePDF from '../assets/resume.pdf';
+import resumeDocx from '../../public/srinidhi_resume.docx';
 import { useEffect, useRef } from 'react';
 
 function Resume() {
@@ -36,11 +36,11 @@ function Resume() {
       <div className="resume-header">
         <h3>Work Experience And Education Timeline View</h3>
         <a 
-          href={resumePDF} 
-          download="Srinidhi_Resume.pdf"
+          href={resumeDocx} 
+          download="resumeDocx"
           className="download-button"
         >
-          Download Resume
+          Download My Resume
         </a>
       </div>
       <Timeline />
