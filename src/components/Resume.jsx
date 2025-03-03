@@ -1,6 +1,6 @@
-import '../styles/Resume.css'; // Adjust the path if needed
+import '../styles/Resume.css';
 import Timeline from './Timeline';
-import resumePDF from '../assets/resume.pdf'; // Make sure to add your resume PDF
+import resumePDF from '../assets/resume.pdf';
 import { useEffect, useRef } from 'react';
 
 function Resume() {
@@ -34,7 +34,7 @@ function Resume() {
   return (
     <section id="resume" ref={sectionRef}>
       <div className="resume-header">
-        <h3>Work Experience And Education</h3>
+        <h3>Work Experience And Education Timeline View</h3>
         <a 
           href={resumePDF} 
           download="Srinidhi_Resume.pdf"
@@ -48,4 +48,4 @@ function Resume() {
   );
 }
 
-export default Resume; 
+export default Resume;

@@ -74,6 +74,9 @@ nav a:hover::after {
 main {
   padding-top: 80px;
   width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 0;
 }
 
 /* Home section styles */
@@ -522,7 +525,7 @@ section h2 {
 }
 
 .timeline-header h3 {
-  margin: 0;
+  margin: 100;
 }
 
 .year {
