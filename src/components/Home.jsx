@@ -50,7 +50,7 @@ function Home() {
             </h2>
           </div>
           <p className="description">
-            A passionate software developer specializing in full-stack development and creating engaging user experiences.
+          I’m a passionate software engineer who loves learning concepts in a relatable way. As the Storyteller at TechStoriesOfSrinidhi, I create content on DSA, system design, and all things tech, breaking down complex concepts with fun, real-life analogies. Why? Because tech is exciting, and learning it should be too!
           </p>
           <a 
             href="https://topmate.io/srinidhi_chintala" 

@@ -18,11 +18,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 8rem;
-  background-color: transparent;
+  background-color: #fdf6f6; /* Match body background */
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000;
+  z-index: 2000;
+  border-bottom: 2px solid #2d2d2d; /* Add visible line */
 }
 
 header h1 {
@@ -72,11 +73,11 @@ nav a:hover::after {
 
 /* Main content styles */
 main {
-  padding-top: 80px;
+  margin-top: 80px; /* Height of header */
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
-  padding: 0;
+  position: relative;
 }
 
 /* Home section styles */
@@ -90,6 +91,8 @@ main {
   margin: 0 auto;
   padding-top: 20vh;
   scroll-snap-align: start;
+  position: relative;
+  z-index: 1600;
 }
 
 .home-container {
@@ -128,6 +131,7 @@ main {
   opacity: 0;
   transform: translateY(-100vh);
   transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 1600;
 }
 
 .title-wrapper.show {
@@ -194,6 +198,8 @@ main {
 
 /* Other sections */
 section {
+  padding-top: 80px;
+  margin-top: -80px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 6rem 2rem;
@@ -444,8 +450,8 @@ section h2 {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 0;  /* Reduced padding since we now have a title */
-  min-height: calc(100vh - 200px);  /* Adjusted for title space */
+  padding-top: 20px;
+  min-height: calc(100vh - 200px);
 }
 
 /* Road path styles */
@@ -737,11 +743,30 @@ html {
 }
 
 #resume {
+  position: relative;
+  padding-top: 20px;
   scroll-snap-align: start;
   min-height: 100vh;
+  z-index: 1500;
 }
 
 #home {
   scroll-snap-align: start;
   min-height: 100vh;
+}
+
+/* Timeline section adjustments */
+.resume-header {
+  position: relative;
+  z-index: 1500;
+  background-color: #fdf6f6;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+/* Adjust mario vehicle to stay below header */
+.mario-vehicle {
+  position: absolute;
+  z-index: 1500;
+  top: 80px; /* Start below header */
 }

@@ -159,7 +159,7 @@ function Timeline() {
           </div>
           <h4>Sandvine · Bengaluru</h4>
           <ul>
-            <li>Developed licensing validation tools</li>
+            <li>Developed licensed validation tools</li>
             <li>Implemented dynamic traffic shaping feature in C++</li>
             <li>Created firmware installation features using NETCONF</li>
           </ul>
