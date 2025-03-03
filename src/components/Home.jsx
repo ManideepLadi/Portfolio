@@ -71,6 +71,17 @@ function Home() {
               <i className="fab fa-instagram"></i>
             </a>
           </div>
+          
+          <div className="channel-links">
+            <a href="https://t.me/your_channel" className="channel-link telegram">
+              <i className="fab fa-telegram"></i>
+              Join Telegram Channel
+            </a>
+            <a href="https://whatsapp.com/channel/your_channel" className="channel-link whatsapp">
+              <i className="fab fa-whatsapp"></i>
+              Join WhatsApp Channel
+            </a>
+          </div>
         </div>
         <div className="profile-image-container">
           <div className="profile-image">

@@ -86,6 +86,7 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   padding-top: 20vh;
+  scroll-snap-align: start;
 }
 
 .home-container {
@@ -724,4 +725,20 @@ section h2 {
   .social-links {
     gap: 1.5rem;
   }
+}
+
+/* Add or modify these styles */
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+#resume {
+  scroll-snap-align: start;
+  min-height: 100vh;
+}
+
+#home {
+  scroll-snap-align: start;
+  min-height: 100vh;
 }
